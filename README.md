@@ -44,13 +44,29 @@ python ./scripts/download_aligned_infore_dataset.py
 See `notebooks/denoise_infore_dataset.ipynb` for instructions on how to denoise the dataset. We use the Montreal Forced Aligner (MFA) to align transcript and speech (textgrid files).
 See `notebooks/align_text_audio_infore_mfa.ipynb` for instructions on how to create textgrid files.
 
+## Train MFA
+
+- input: split .wav + .txt files
+- output: .TextGrid files
+
+```
+pip install montreal-forced-aligner
+mfa train --clean --disable_textgrid_cleanup -t /home/vgm/Projects/hifi-gan/tmp -C /home/vgm/Projects/hifi-gan/LJSpeech-1.1/wavs /home/vgm/Projects/hifi-gan/lexicon.txt /home/vgm/Projects/hifi-gan/mfa
+```
+
 ## Train duration model
+
+- input: split .wavs + .TextGrid files
+- output: duration_latest_checkpoint.pickle
 
 ```sh
 python -m vietTTS.nat.duration_trainer
 ```
 
 ## Train acoustic model
+
+- input: split .wavs + .TextGrid files
+- output: duration_latest_checkpoint.pickle
 
 ```sh
 python -m vietTTS.nat.acoustic_trainer
