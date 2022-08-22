@@ -11,7 +11,7 @@ class FLAGS(Namespace):
     duration_lstm_dim = 256
     vocab_size = 256
     duration_embed_dropout_rate = 0.5
-    num_training_steps = 200_000
+    num_training_steps = 1_000_000
     postnet_dim = 512
     acoustic_decoder_dim = 512
     acoustic_encoder_dim = 256
@@ -42,7 +42,7 @@ class FLAGS(Namespace):
     # dsp
     mel_dim = 80
     n_fft = 1024
-    sample_rate = 16000
+    sample_rate = 20050
     fmin = 0.0
     fmax = 8000
 
