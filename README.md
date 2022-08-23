@@ -22,6 +22,7 @@ Optional:
 ```
 conda install -c nvidia cuda
 pip install --upgrade "jax[cuda]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+conda install -c conda-forge cudatoolkit cudnn
 conda install -c conda-forge -c pytorch pytorch torchvision torchaudio cudatoolkit=11.6
 conda install -c conda-forge matplotlib jupyterlab
 
