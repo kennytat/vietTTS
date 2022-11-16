@@ -56,7 +56,7 @@ See `notebooks/align_text_audio_infore_mfa.ipynb` for instructions on how to cre
 - output: .TextGrid files
 
 ```
-pip install montreal-forced-aligner
+conda install -c conda-forge montreal-forced-aligner
 mfa train --clean --disable_textgrid_cleanup -t /home/vgm/Projects/hifi-gan/tmp -C /home/vgm/Projects/hifi-gan/LJSpeech-1.1/wavs /home/vgm/Projects/hifi-gan/lexicon.txt /home/vgm/Projects/hifi-gan/mfa -o mfa-phoneme.zip
 ```
 
